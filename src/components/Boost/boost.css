@@ -1,0 +1,30 @@
+.boost {
+  width: auto;
+  background-color: var(---DarkViolet--);
+  background-image: url("/public/images/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.boost > h1 {
+  color: #fff;
+}
+
+.gts-btn {
+  width: 200px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(---Cyan--);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}

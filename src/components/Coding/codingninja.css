@@ -1,0 +1,12 @@
+.me {
+  text-align: center;
+}
+
+.coding-ninja {
+  text-decoration: none;
+  color: black;
+}
+
+.coding-ninja:hover {
+  color: var(---Cyan--);
+}

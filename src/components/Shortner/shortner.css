@@ -1,0 +1,58 @@
+.shortener {
+  background-color: var(---DarkViolet--);
+  background-image: url("/public/images/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transform: translateY(-115%);
+  width: 100%;
+  background-position: 50% center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  padding: 30px 0px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 60% 27%;
+  justify-content: center;
+  width: 100%;
+  gap: 3%;
+  margin: auto;
+  padding: 5px 20px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input {
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: 15px;
+  border-inline: none;
+  padding: 15px;
+}
+
+.shorten-it {
+  background-color: var(---Cyan--);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-width: 2px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  border-radius: 15px;
+  padding: 15px;
+}

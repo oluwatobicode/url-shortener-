@@ -1,0 +1,46 @@
+.footer {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(---VeryDarkBlue--);
+}
+
+.footer-items {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+.shortly-socials {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.shortly-socials > img:hover {
+  color: var(---Cyan--);
+}
+
+.footer-items h3 {
+  color: #fff;
+  padding-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer-items ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(---Gray--);
+  cursor: pointer;
+}
+
+.footer-items ul :hover {
+  color: var(---Cyan--);
+}
