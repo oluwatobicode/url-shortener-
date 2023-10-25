@@ -117,3 +117,24 @@ textarea:focus,
 input:focus {
   outline: none;
 }
+
+@media screen and (max-width: 820px) {
+  .stats {
+    flex-direction: column;
+  }
+
+  .icon {
+    transform: translate(109px, -32px);
+  }
+  .stat-1 {
+    width: 50%;
+  }
+
+  .stat-2 {
+    width: 50%;
+  }
+
+  .stat-3 {
+    width: 50%;
+  }
+}

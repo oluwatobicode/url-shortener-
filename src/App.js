@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar/Navbar";
 // import Shortner from "./components/Shortner/Shortner";
 import Statics from "./components/Statics/Statics";
 import CodingNinja from "./components/Coding/CodingNinja";
+import { useState } from "react";
 
 export default function App() {
   return (

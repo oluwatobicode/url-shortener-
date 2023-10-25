@@ -44,3 +44,27 @@
 .footer-items ul :hover {
   color: var(---Cyan--);
 }
+
+@media screen and (max-width: 820px) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-items {
+    flex-direction: column;
+  }
+
+  .resources {
+    text-align: center;
+  }
+
+  .company {
+    text-align: center;
+  }
+
+  .features {
+    text-align: center;
+  }
+}

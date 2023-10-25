@@ -60,3 +60,22 @@
   font-weight: 700;
   font-size: 1rem;
 }
+
+@media screen and (max-width: 820px) {
+  .hero {
+    flex-direction: column-reverse;
+  }
+
+  .hero-text {
+    align-items: center;
+  }
+
+  .hero-image {
+    aspect-ratio: 1/0.7;
+    width: 90%;
+  }
+
+  .hero-text h1 {
+    text-align: center;
+  }
+}

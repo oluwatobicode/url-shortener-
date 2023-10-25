@@ -23,7 +23,9 @@ export default function Footer() {
           <h3>Features</h3>
           <ul className="features-links">
             {features.map((el) => (
-              <li className="features-items">{el}</li>
+              <li key={el} className="features-items">
+                {el}
+              </li>
             ))}
           </ul>
         </div>
@@ -31,7 +33,9 @@ export default function Footer() {
           <h3>Resources</h3>
           <ul className="resources-links">
             {resources.map((el) => (
-              <li className="resources-items">{el}</li>
+              <li key={el} className="resources-items">
+                {el}
+              </li>
             ))}
           </ul>
         </div>
@@ -39,7 +43,9 @@ export default function Footer() {
           <h3>Company</h3>
           <ul className="company-links">
             {company.map((el) => (
-              <li className="company-items">{el}</li>
+              <li key={el} className="company-items">
+                {el}
+              </li>
             ))}
           </ul>
         </div>

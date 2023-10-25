@@ -28,3 +28,11 @@
   font-weight: 700;
   cursor: pointer;
 }
+
+@media screen and (max-width: 820px) {
+  .boost {
+    background-image: url("/public/images/bg-boost-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
