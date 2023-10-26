@@ -88,7 +88,7 @@ input {
 
 .copy {
   border: none;
-  width: 85px;
+  width: 100px;
   height: 35px;
   background-color: var(---Cyan--);
   color: #fff;
@@ -114,7 +114,17 @@ input {
     align-items: first baseline;
     width: max-content;
     gap: 25px;
-    margin: 0 auto;
+    margin: 10px auto;
+  }
+
+  .all {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .shortned-link h1 {
+    font-size: 1rem;
   }
 
   .result {
