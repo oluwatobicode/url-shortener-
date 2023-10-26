@@ -1,16 +1,56 @@
 import { useEffect, useState } from "react";
 import "./shortner.css";
 
-export default function Shortner() {
+export default function Shortner({ addToList, Oldlink }) {
   const [Link, setLink] = useState("");
+  const [shortLink, setShortLink] = useState("");
 
-  const userLink = { Link, id: Date.now() };
+  useEffect(function () {
+    const controller = new AbortController();
+    const shortnedUrl = async () => {
+      try {
+        const res = await fetch(
+          "https://api-ssl.bitly.com/v4/shorten",
+          {
+            method: "POST",
+            headers: {
+              Authorization: "8d93dccb3f3acb5c724665de714df52bcf1989cb",
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              long_url: Link,
+              domain: "bit.ly",
+            }),
+          },
+          { signal: controller.signal }
+        );
+        const data = await res.json();
+        setShortLink(data.id);
+        console.log(data.id);
+        console.log(shortLink);
+      } catch (error) {
+        console.log(error.message);
+      }
+      if (Link.length < 5) {
+        setLink("");
+        return;
+      }
+    };
+    shortnedUrl();
+
+    return function () {
+      controller.abort();
+    };
+  });
 
   function ShortenedLink(e) {
     e.preventDefault();
     if (!Link) return;
     console.log(userLink);
+    addToList(userLink);
   }
+
+  const userLink = { Link, shortLink, id: Date.now() };
 
   return (
     <div className="shorter">
@@ -31,12 +71,12 @@ export default function Shortner() {
         </form>
       </div>
 
-      {Link && (
+      {Oldlink.length > 0 && (
         <div className="shortned-link">
           <h3>{Link}</h3>
           <div className="result">
             <p>
-              <a href="#">https://rel.ink/k4lKyk</a>
+              <a href={shortLink}>{shortLink}</a>
             </p>
             <button className="copy">Copy</button>
           </div>

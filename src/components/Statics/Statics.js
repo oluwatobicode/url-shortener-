@@ -1,10 +1,10 @@
 import Shortner from "../Shortner/Shortner";
 import "./statics.css";
 
-export default function Statics() {
+export default function Statics({ addToList, Oldlink }) {
   return (
     <div className="statics">
-      <Shortner />
+      <Shortner addToList={addToList} Oldlink={Oldlink} />
 
       <div className="statics-intro">
         <h1> Advanced Statistics</h1>

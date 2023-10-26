@@ -10,6 +10,13 @@ import CodingNinja from "./components/Coding/CodingNinja";
 import { useState } from "react";
 
 export default function App() {
+  const [Oldlink, setOldLink] = useState([]);
+
+  function addToList(link) {
+    setOldLink((Oldlink) => [...Oldlink, link]);
+    console.log(Oldlink);
+  }
+
   return (
     <div>
       <Navbar />
@@ -18,7 +25,7 @@ export default function App() {
 
       {/* <Shortner /> */}
 
-      <Statics />
+      <Statics addToList={addToList} Oldlink={Oldlink} />
 
       <Boost />
 
